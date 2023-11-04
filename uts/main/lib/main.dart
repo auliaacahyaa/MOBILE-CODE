@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:main/screens/beranda.dart'; //tes
+import 'package:main/screens/navbar.dart';
 
 
 void main() {
