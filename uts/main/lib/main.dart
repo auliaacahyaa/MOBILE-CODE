@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:main/screens/beranda.dart'; //tes
-import 'package:main/screens/navbar.dart';
-
+import './screens/beranda.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
+      
     );
   }
 }
