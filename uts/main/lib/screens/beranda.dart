@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'navbar.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -457,7 +458,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            
           ],
         ),
       ),
