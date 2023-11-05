@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'navbar.dart';
 
 class HistoryPage extends StatelessWidget {
-  const HistoryPage({Key? key}) : super(key: key);
+  const HistoryPage({
+    Key ? key
+  }): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,26 +14,37 @@ class HistoryPage extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
-            title: const Text(
+            title: Text(
               'Transaction History',
               style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.bold),
+                color: Colors.black,
+                fontWeight: FontWeight.bold),
             ),
+
             centerTitle: true,
-            bottom: const TabBar(
+            bottom: TabBar(
               indicatorColor: Color.fromARGB(255, 244, 0, 0),
               tabs: [
                 Tab(
-                  child: Text('Pending', style: TextStyle(color: Colors.black)),
+                  child: Text(
+                    'Pending',
+                    style: TextStyle(
+                      color: Colors.black, // Warna teks untuk tab 'Pending'
+                    ),
+                  ),
                 ),
                 Tab(
-                  child: Text('Done', style: TextStyle(color: Colors.black)),
+                  child: Text(
+                    'Done',
+                    style: TextStyle(
+                      color: Colors.black, // Warna teks untuk tab 'Done'
+                    ),
+                  ),
                 ),
               ],
             ),
           ),
+
           body: TabBarView(
             children: [
               // Tab "Pending"
@@ -39,31 +52,47 @@ class HistoryPage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/images/drop.png',
+                    Image.network(
+                      'https://cdn-icons-png.flaticon.com/512/8818/8818197.png',
                       width: 190,
                       height: 190,
                     ),
-                    const SizedBox(height: 35),
-                    const Text(
-                      'All Transaction is Completed!',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-                    ),
-                    const SizedBox(height: 10),
-                    const Text(
-                      'Any pending transaction will appear in this page',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontWeight: FontWeight.normal,
+
+                    Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(height: 35),
+                          Text(
+                            'All Transaction is Completed!',
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Any pending transaction will appear in this page',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
+                    )
+
                   ],
                 ),
               ),
-              const Center(
-                child: Text('Transaction is Completed!'),
+              Center(
+                child: Text(
+                  'Transaction is Completed!',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 55, 54, 54),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                  ),
+                ),
               ),
+
             ],
           ),
           bottomNavigationBar: const Navbar(),

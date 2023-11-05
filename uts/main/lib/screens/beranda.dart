@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'navbar.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({
+    Key ? key
+  }): super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Color.fromARGB(255, 253, 248, 248),
-      child: Container(
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 253, 248, 248),
+      body: Container(
         child: Stack(
           children: [
             Container(
@@ -18,7 +21,8 @@ class HomeScreen extends StatelessWidget {
                     "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRGV834j6wqK7Iz6W8ZVlxi_eVIhj5BPWtdEwQGle7iDBPoafy6",
                   ),
                   fit: BoxFit.contain,
-                  alignment: Alignment.topCenter / 0.92, // Atur posisi gambar pada latar belakang
+                  alignment: Alignment.topCenter /
+                  0.92, // Atur posisi gambar pada latar belakang
                 ),
               ),
             ),
@@ -31,7 +35,10 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 16, right: 16, top: 20), // Jarak kiri, kanan, dan atas 2 cm
+                    padding: EdgeInsets.only(
+                      left: 16,
+                      right: 16,
+                      top: 20), // Jarak kiri, kanan, dan atas 2 cm
                     child: Image.network(
                       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LinkAja.svg/2048px-LinkAja.svg.png",
                       width: 50,
@@ -46,7 +53,8 @@ class HomeScreen extends StatelessWidget {
                     height: 38,
                     decoration: BoxDecoration(
                       color: Colors.white, // Latar belakang putih
-                      borderRadius: BorderRadius.circular(7), // Melengkungkan tepi
+                      borderRadius:
+                      BorderRadius.circular(7), // Melengkungkan tepi
                     ),
                     child: Center(
                       child: Image.network(
@@ -64,7 +72,8 @@ class HomeScreen extends StatelessWidget {
                       height: 38,
                       decoration: BoxDecoration(
                         color: Colors.white, // Latar belakang putih
-                        borderRadius: BorderRadius.circular(7), // Melengkungkan tepi
+                        borderRadius:
+                        BorderRadius.circular(7), // Melengkungkan tepi
                       ),
                       child: Center(
                         child: Image.network(
@@ -78,10 +87,11 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
-            Positioned( // Atur posisi kotak
+            Positioned(
+              // Atur posisi kotak
               top: 135, // Ubah koordinat Y untuk menggeser ke atas
-              left: (MediaQuery.of(context).size.width - 380) / 2, // Pusatkan horizontal
+              left: (MediaQuery.of(context).size.width - 380) /
+              2, // Pusatkan horizontal
               child: Container(
                 width: 380,
                 height: 160,
@@ -91,9 +101,11 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned( // Tambahkan teks di atas kotak merah
+            Positioned(
+              // Tambahkan teks di atas kotak merah
               top: 160, // Menggeser ke atas
-              left: (MediaQuery.of(context).size.width - 345) / 2, // Pusatkan horizontal
+              left: (MediaQuery.of(context).size.width - 345) /
+              2, // Pusatkan horizontal
               child: Container(
                 width: 300,
                 child: Text(
@@ -105,9 +117,11 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned( // Tambahkan dua kotak putih di atas kotak merah
+            Positioned(
+              // Tambahkan dua kotak putih di atas kotak merah
               top: 200, // Menggeser ke atas
-              left: (MediaQuery.of(context).size.width - 350) / 2, // Pusatkan horizontal
+              left: (MediaQuery.of(context).size.width - 350) /
+              2, // Pusatkan horizontal
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -116,11 +130,13 @@ class HomeScreen extends StatelessWidget {
                     height: 74,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10), // Tambahkan radius
+                      borderRadius:
+                      BorderRadius.circular(10), // Tambahkan radius
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start, // Tambahkan ini
+                      crossAxisAlignment:
+                      CrossAxisAlignment.start, // Tambahkan ini
                       children: [
                         Padding(
                           padding: EdgeInsets.only(left: 10), // Jarak kiri teks
@@ -133,14 +149,14 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 10, top: 5), // Jarak kiri teks
+                          padding: EdgeInsets.only(
+                            left: 10, top: 5), // Jarak kiri teks
                           child: Text(
                             "Rp 10.184",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 15,
-                              fontWeight: FontWeight.bold
-                            ),
+                              fontWeight: FontWeight.bold),
                           ),
                         ),
                       ],
@@ -152,11 +168,13 @@ class HomeScreen extends StatelessWidget {
                     height: 74,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10), // Tambahkan radius
+                      borderRadius:
+                      BorderRadius.circular(10), // Tambahkan radius
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start, // Tambahkan ini
+                      crossAxisAlignment:
+                      CrossAxisAlignment.start, // Tambahkan ini
                       children: [
                         Padding(
                           padding: EdgeInsets.only(left: 10), // Jarak kiri teks
@@ -169,14 +187,14 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 10, top: 5), // Jarak kiri teks
+                          padding: EdgeInsets.only(
+                            left: 10, top: 5), // Jarak kiri teks
                           child: Text(
                             "0",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 15,
-                              fontWeight: FontWeight.bold
-                            ),
+                              fontWeight: FontWeight.bold),
                           ),
                         ),
                       ],
@@ -185,10 +203,10 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
             Positioned(
               top: 310, // Menggeser ke atas
-              left: (MediaQuery.of(context).size.width - 380) / 2, // Pusatkan horizontal
+              left: (MediaQuery.of(context).size.width - 380) /
+              2, // Pusatkan horizontal
               child: Container(
                 width: 380,
                 height: 100, // Ubah tinggi sesuai kebutuhan
@@ -254,10 +272,11 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-
-            Positioned( // Tambahkan empat kolom di bawah kotak putih terakhir
+            Positioned(
+              // Tambahkan empat kolom di bawah kotak putih terakhir
               top: 430, // Sesuaikan posisi sesuai kebutuhan
-              left: (MediaQuery.of(context).size.width - 370) / 2, // Pusatkan horizontal
+              left: (MediaQuery.of(context).size.width - 370) /
+              2, // Pusatkan horizontal
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -311,10 +330,11 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
-            Positioned( // Tambahkan empat kolom di bawah kotak putih terakhir
+            Positioned(
+              // Tambahkan empat kolom di bawah kotak putih terakhir
               top: 500, // Sesuaikan posisi sesuai kebutuhan
-              left: (MediaQuery.of(context).size.width - 365) / 2, // Pusatkan horizontal
+              left: (MediaQuery.of(context).size.width - 365) /
+              2, // Pusatkan horizontal
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -372,8 +392,8 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
-            Positioned( // Tambahkan tiga kotak iklan yang dapat digeser
+            Positioned(
+              // Tambahkan tiga kotak iklan yang dapat digeser
               top: 600, // Sesuaikan posisi sesuai kebutuhan
               left: 0,
               child: Container(
@@ -384,7 +404,8 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Container(
                       width: 300, // Lebar kotak iklan
-                      margin: EdgeInsets.only(left: 10, right: 10), // Jarak antara kotak iklan
+                      margin: EdgeInsets.only(
+                        left: 10, right: 10), // Jarak antara kotak iklan
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -397,18 +418,21 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10), // Border radius untuk gambar
+                        borderRadius: BorderRadius.circular(
+                          10), // Border radius untuk gambar
                         child: Image.network(
                           "https://cdn.linkaja.com/website/posts/May2022/1652448404-WEB%20BANNER%20794x366%20(38).jpg", // Ganti dengan URL gambar iklan pertama
                           width: 300, // Sesuaikan lebar gambar
                           height: 150, // Sesuaikan tinggi gambar
-                          fit: BoxFit.cover, // Sesuaikan cara gambar ditampilkan
+                          fit:
+                          BoxFit.cover, // Sesuaikan cara gambar ditampilkan
                         ),
                       ),
                     ),
                     Container(
                       width: 300, // Lebar kotak iklan
-                      margin: EdgeInsets.only(right: 10), // Jarak antara kotak iklan
+                      margin: EdgeInsets.only(
+                        right: 10), // Jarak antara kotak iklan
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -421,18 +445,21 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10), // Border radius untuk gambar
+                        borderRadius: BorderRadius.circular(
+                          10), // Border radius untuk gambar
                         child: Image.network(
                           "https://awsimages.detik.net.id/community/media/visual/2022/07/04/bni_169.png?w=1200", // Ganti dengan URL gambar iklan kedua
                           width: 300, // Sesuaikan lebar gambar
                           height: 150, // Sesuaikan tinggi gambar
-                          fit: BoxFit.cover, // Sesuaikan cara gambar ditampilkan
+                          fit:
+                          BoxFit.cover, // Sesuaikan cara gambar ditampilkan
                         ),
                       ),
                     ),
                     Container(
                       width: 300, // Lebar kotak iklan
-                      margin: EdgeInsets.only(right: 10), // Jarak antara kotak iklan
+                      margin: EdgeInsets.only(
+                        right: 10), // Jarak antara kotak iklan
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -445,12 +472,14 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10), // Border radius untuk gambar
+                        borderRadius: BorderRadius.circular(
+                          10), // Border radius untuk gambar
                         child: Image.network(
                           "https://pbs.twimg.com/media/FEeVl0VVcAI8Ro7.jpg", // Ganti dengan URL gambar iklan ketiga
                           width: 300, // Sesuaikan lebar gambar
                           height: 150, // Sesuaikan tinggi gambar
-                          fit: BoxFit.cover, // Sesuaikan cara gambar ditampilkan
+                          fit:
+                          BoxFit.cover, // Sesuaikan cara gambar ditampilkan
                         ),
                       ),
                     ),
@@ -461,6 +490,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: Navbar(),
     );
   }
 }
