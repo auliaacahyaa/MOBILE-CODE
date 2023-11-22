@@ -6,6 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Suhu Converter',
       home: TemperatureConverter(),
     );
@@ -92,7 +93,7 @@ class _TemperatureConverterState extends State<TemperatureConverter> {
             ),
             SizedBox(height: 10),
              Container(
-              margin: EdgeInsets.only(top: 450), // Atur posisi top sesuai kebutuhan
+              margin: EdgeInsets.only(top: 350), // Atur posisi top sesuai kebutuhan
               child: ElevatedButton(
                 onPressed: () {
                   _convertTemperature();
