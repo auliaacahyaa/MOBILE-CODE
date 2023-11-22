@@ -1,4 +1,8 @@
+// main.dart
 import 'package:flutter/material.dart';
+import 'input_widget.dart';
+import 'result_widget.dart';
+import 'button_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,62 +49,12 @@ class _TemperatureConverterState extends State<TemperatureConverter> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextField(
-              controller: _celsiusController,
-              keyboardType: TextInputType.numberWithOptions(decimal: true),
-              decoration: InputDecoration(
-                labelText: 'Masukkan Suhu (Celsius)',
-              ),
-            ),
+            InputWidget(controller: _celsiusController),
             SizedBox(height: 20),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        children: [
-                          Text('Suhu dalam Kelvin:', style: TextStyle(fontSize: 18)),
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text('$_kelvinResult', style: TextStyle(fontSize: 20)),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text('Suhu dalam Reamur:', style: TextStyle(fontSize: 18)),
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text('$_reamurResult', style: TextStyle(fontSize: 20)),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+            ResultWidget(kelvinResult: _kelvinResult, reamurResult: _reamurResult),
             SizedBox(height: 10),
-             Container(
-              margin: EdgeInsets.only(top: 350), // Atur posisi top sesuai kebutuhan
-              child: ElevatedButton(
-                onPressed: () {
-                  _convertTemperature();
-                },
-                child: Text('Konversi Suhu'),
-              ),
-            ),
+            Spacer(),
+            ConvertButton(onPressed: _convertTemperature),
           ],
         ),
       ),
